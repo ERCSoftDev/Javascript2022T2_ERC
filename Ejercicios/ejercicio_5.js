@@ -10,3 +10,4 @@ let resultado;
         resultado=num_2;
             console.log('el mayor es: ' + resultado);
 }
+//esto es para agregar una linea
