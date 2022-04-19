@@ -1,10 +1,17 @@
 
-let numero = prompt('Ingrese los numeros: ');
-let resultado;
+var prompt = require('prompt')
 
-    for (let index = 2; index < numero / 2; index++) {
-        if(numero % index == 0){
-            resultado = numero;
-            console.log('son divisible' + resultado);
+prompt.start();
+prompt.get(['num1'] , function (err, result){
+
+    let num1 = parseInt(result.num1)
+    let resultado;
+
+    for (let index = 2; index < num1 / 2; index++) {
+        if(num1 % index == 0){
+            resultado = num1;
+            console.log('es dividible: ' + resultado);
         }
 }
+   }
+);
