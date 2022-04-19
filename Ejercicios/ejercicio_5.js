@@ -1,12 +1,17 @@
+var prompt = require('prompt')
 
-let num_1 =  prompt('Ingrese el primer numero: ');
-let num_2 =  prompt('Ingrese el segundo numero: ');
-let resultado;
+prompt.start();
+prompt.get(['num1','num2'] , function (err, result){
 
-    if(num_1 > num_2){
-        resultado=num_1;
-            console.log('el mayor es: ' + resultado);
+    let num1 = parseInt(result.num1)
+    let num2 = parseInt(result.num2)
+    result= null;
+
+    if(num1 > num2){
+        result= num1;
+        console.log("resultado: " + result);
     }else{
-        resultado=num_2;
-            console.log('el mayor es: ' + resultado);
-}
+        result= num2;
+        console.log("resultado: " + result);
+    }   
+});

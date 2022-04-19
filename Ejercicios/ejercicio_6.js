@@ -1,19 +1,25 @@
+var prompt = require('prompt')
 
-let num_1 = prompt('Ingrese el primer numero: ');
-let num_2 = prompt('Ingrese el segundo numero: ');
-let num_3 = prompt('Ingrese el tercer numero: ');
-let resultado;
+prompt.start();
+prompt.get(['num1','num2','num3'] , function (err, result){
 
-    if(num_1 > num_2 && num_1 > num_3){
-            resultado=num_1;
-            console.log('el mayor es: ' + resultado);
-    }else{
-        if(num_2 > num_1 && num_2 > num_3){
-            resultado=num_2;
-            console.log('el mayor es: ' + resultado);
+    let num1 = parseInt(result.num1)
+    let num2 = parseInt(result.num2)
+    let num3 = parseInt(result.num3)
+    let resultado;
+
+    if(num1 > num2 && num1 > num3){
+        resultado=num1;
+        console.log('el mayor es: ' + resultado);
         }else{
-            resultado=num_3;
-            console.log('el mayor es: ' + resultado);
-        }
-    }      
-  
+            if(num2 > num1 && num2 > num3){
+                resultado=num2;
+                console.log('el mayor es: ' + resultado);
+             }else{
+                resultado=num3;
+                console.log('el mayor es: ' + resultado);
+            }
+        }    
+    }
+);
+

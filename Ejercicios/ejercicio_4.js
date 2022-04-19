@@ -1,5 +1,9 @@
 
-let num_1 =  prompt('ingrese el primer numero');
-let num_2 =  prompt('ingrese el segundo numero');
+var prompt = require('prompt')
 
-    console.log('Resultado: ' + num_1 + num_2);
+prompt.start();
+prompt.get(['num1','num2'] , function (err, result){
+
+    let suma = parseInt(result.num1) + parseInt(result.num2)
+    console.log("resultado: " + suma);
+});
