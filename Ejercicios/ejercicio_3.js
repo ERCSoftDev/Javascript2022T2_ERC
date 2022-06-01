@@ -1,3 +1,9 @@
-let nmbre = prompt('como te llamas ?');
 
-    console.log('hola ' + nombre);
+var prompt = require('prompt')
+
+prompt.start();
+
+prompt.get(['nombre'], function (err, result){
+
+    console.log("hola " + result.nombre);
+});

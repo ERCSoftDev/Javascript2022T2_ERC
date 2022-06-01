@@ -16,6 +16,11 @@ prompt.get(['num1'] , function (err, result){
             console.log('no es primo: ');
             return num1 !== 1;
 
+    for (let index = 2; index < num1 / 2; index++) {
+        if(num1 % index == 0){
+            resultado = num1;
+            console.log('es dividible: ' + resultado);
+        }
 }
    }
 );
